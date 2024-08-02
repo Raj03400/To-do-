@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(to right top, #490b86, #5b2a86, #7785ac);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 2rem;
+    padding: 0.75rem;
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.heading {
+    width: 100%;
+    margin: 10px auto;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+}
+
+.heading img {
+    width: 30px;
+    margin-left: 0.8rem;
+}
+
+.heading h2 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    color: #741cc0;
+
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding-left: 0.5rem;
+    border-radius: 1.8rem;
+    margin-bottom: 25px;
+    /* position: fixed; */
+}
+
+.input input {
+    flex: 1;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    padding: 0.625rem;
+    background: transparent;
+}
+
+.input button {
+    border-radius: 1.8rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0.8rem 3rem;
+    background-color: #5b2a86;
+    cursor: pointer;
+    user-select: none;
+}
+
+.input input::placeholder {
+    user-select: none;
+    color: grey;
+}
+
+.input input.red::placeholder {
+    color: red;
+}
+
+.input input.shake[placeholder] {
+    user-select: none;
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(25px);
+    }
+
+    75% {
+        transform: translateX(-25px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.6rem;
+    user-select: none;
+    padding: 0.75rem 0.5rem 0.75rem 3.125rem;
+    position: relative;
+    margin-left: 2rem;
+    cursor: pointer;
+
+}
+
+ul .msg {
+    font-size: 1.3rem;
+    color: #555;
+    font-weight: bold;
+    text-align: center;
+    margin: 5rem;
+    user-select: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+li div i {
+    font-size: 15px;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background-image: url(/images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    left: 0.0313rem;
+    top: 0.7rem;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(/images/checked.png);
+}
+
+.fa-edit:hover {
+    cursor: pointer;
+    color: #481ec9;
+}
+
+.fa-trash:hover {
+    color: red;
+    cursor: pointer;
+}
+
+    /* styling of driver.js library for tour */
+.driver-popover.driverjs-theme {
+    background: linear-gradient(to left top, #490b86, #5b2a86);
+    /* background-color: #fde047; */
+    color: #fff;
+}
+
+.driver-popover.driverjs-theme .driver-popover-title {
+    font-size: 20px;
+}
+
+.driver-popover.driverjs-theme .driver-popover-title,
+.driver-popover.driverjs-theme .driver-popover-description,
+.driver-popover.driverjs-theme .driver-popover-progress-text {
+    color: #fff;
+}
+
+.driver-popover.driverjs-theme button {
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    text-shadow: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px;
+    transition: ease-in 0.20s;
+    border-radius: 6px;
+}
+
+.driver-popover.driverjs-theme .driver-popover-close-btn {
+    color: #000;
+    padding: 0px !important;
+    margin: 2px 8px 0px 0px;
+}
+
+.driver-popover.driverjs-theme .driver-popover-arrow-side-left.driver-popover-arrow {
+    border-left-color: #fde047;
+}
+
+/*   
+  .driver-popover.driverjs-theme .driver-popover-arrow-side-right.driver-popover-arrow {
+    border-right-color: #fde047;
+  }
+  
+  .driver-popover.driverjs-theme .driver-popover-arrow-side-top.driver-popover-arrow {
+    border-top-color: #fde047;
+  }
+  
+  .driver-popover.driverjs-theme .driver-popover-arrow-side-bottom.driver-popover-arrow {
+    border-bottom-color: #fde047;
+  } */
